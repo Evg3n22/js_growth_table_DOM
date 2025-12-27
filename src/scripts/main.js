@@ -6,14 +6,9 @@ const tbody = document.querySelector('tbody');
 const btns = document.querySelectorAll('.button');
 
 container.addEventListener('click', (e) => {
-  // const currColumns = Array.from(
-  //   tbody.querySelectorAll('tr:nth-child(1) td'),
-  // ).length;
-  // const currRows = Array.from(tbody.querySelectorAll('tr')).length;
-
   // Add rows
   if (e.target === btns[0]) {
-    const currColumns = Array.from(
+    const columnLength = Array.from(
       tbody.querySelectorAll('tr:nth-child(1) td'),
     ).length;
 
@@ -21,7 +16,7 @@ container.addEventListener('click', (e) => {
 
     const tr = document.createElement('tr');
 
-    for (let i = 0; i < currColumns; i++) {
+    for (let i = 0; i < columnLength; i++) {
       const td = document.createElement('td');
 
       tr.appendChild(td);
